@@ -10,4 +10,8 @@
 1. Eclipse可以自动生成Client代码
 2. Eclipse生成的代码通过```new ……ServiceLocator().get……Port()```获取调用类
 3. wsimport命令可以自动生成Client代码
-4. wsimport命令生成的代码通过```new ……Service().get……Port()```获取调用类
+4. 命令形式为：wsimport -s [结果路径] -p [包名] -keep [服务路径]
+5. 服务路径可以是URL，也可以是文件（URL内容的保存，以```wsdl:definitions```标签包含）
+6. wsimport命令生成的代码通过```new ……Service().get……Port()```获取调用类
+7. asmx后缀的URL，由wsimport命令生成的代码通过```new ……().get……Port()```获取调用类
+
